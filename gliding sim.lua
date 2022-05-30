@@ -4,12 +4,15 @@ local w = library:CreateWindow("Gliding Simulator") -- Creates the window
 
 local b = w:CreateFolder("Coins") -- Creates the folder(U will put here your buttons,etc)
 
-local c = w:CreateFolder("Flying") -- Creates the folder(U will put here your buttons,etc)
+local c = w:CreateFolder("Gems") -- Creates the folder(U will put here your buttons,etc)
+
+local d = w:CreateFolder("Flying") -- Creates the folder(U will put here your buttons,etc)
 
 b:Button("Enable Collecting",function()
 getgenv().on = true; -- change to false to disable
 while getgenv().on == true do
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Collectables.CoinBoost.Weight.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Collectables.Coin2Boost.Weight.CFrame
+
 print("This code is running.")
 game:GetService("RunService").Heartbeat:wait();
 end;
@@ -18,13 +21,13 @@ end)
 b:Button("Disable Collecting",function()
 getgenv().on = false; -- change to false to disable
 while getgenv().on == true do
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Collectables.CoinBoost.Weight.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Collectables.Coin2Boost.Weight.CFrame
 print("This code is running.")
 game:GetService("RunService").Heartbeat:wait();
 end;
 end)
 
-c:Button("Enable Easy Mode",function()
+d:Button("Enable Easy Mode",function()
 local local_player = game:GetService("Players").LocalPlayer;
 local player_main = local_player.PlayerScripts.PlayerMain;
 
@@ -42,6 +45,24 @@ old = hookfunction(glider_module.onRenderStepped, function(glider_object, charac
     
     old(glider_object, character_object);
 end);
+end)
+
+c:Button("Enable Collecting",function()
+getgenv().on = true; -- change to false to disable
+while getgenv().on == true do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Collectables.GemBoost.Weight.CFrame
+print("This code is running.")
+game:GetService("RunService").Heartbeat:wait();
+end;
+end)
+
+c:Button("Disable Collecting",function()
+getgenv().on = false; -- change to false to disable
+while getgenv().on == true do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Collectables.GemBoost.Weight.CFrame
+print("This code is running.")
+game:GetService("RunService").Heartbeat:wait();
+end;
 end)
 
 
