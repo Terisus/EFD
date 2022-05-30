@@ -3,8 +3,6 @@ local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Aika
 local w = library:CreateWindow("EFD") -- Creates the window
 
 local b = w:CreateFolder("Main") -- Creates the folder(U will put here your buttons,etc)
-local a = w:CreateFolder("Teleports") -- Creates the folder(U will put here your buttons,etc)
-local c = w:CreateFolder("Item TPs") -- Creates the folder(U will put here your buttons,etc)
 
 _G.FriendColor = Color3.fromRGB(0, 0, 255)
 _G.EnemyColor = Color3.fromRGB(255, 0, 0)
