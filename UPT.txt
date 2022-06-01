@@ -11,7 +11,7 @@ local Tab = Window:MakeTab({
 Tab:AddLabel("Grab / Collect Given Items")
 
 Tab:AddButton({
-	Name = "Powers",
+	Name = "Powers [P]",
 	Callback = function()
 for i, v in ipairs(game.Workspace:GetDescendants("Tycoons")) do
 if v:IsA("Part") and v.Name == "Neon" then
@@ -27,8 +27,10 @@ OrionLib:MakeNotification({
 	end    
 })
 
+Tab:AddLabel("Will collect all Active powers ingame.")
+
 Tab:AddButton({
-	Name = "Money",
+	Name = "Money [M]",
 	Callback = function()
 for i, z in ipairs(game.Workspace:GetDescendants("Tycoons")) do
 if z:IsA("Part") and z.Name == "Ching" then
@@ -44,6 +46,7 @@ OrionLib:MakeNotification({
 	end    
 })
 
+Tab:AddLabel("Will Collect both Money Pads.")
   	    
 local Tab = Window:MakeTab({
 	Name = "Destroy",
@@ -100,7 +103,7 @@ OrionLib:MakeNotification({
 	Content = "TP Till will be given upon respawn",
 	Image = "rbxassetid://4483345998",
 	Time = 5})
-      		print("moneycollected")
+      		print("tptool")
 	end    
 })
 
@@ -112,6 +115,44 @@ local Tab = Window:MakeTab({
 
 Tab:AddLabel("Credits")
 Tab:AddParagraph("Kidwitmidgetfriend","Robloxscripts.com - Thread 7254")
+
+Tab:AddBind({
+	Name = "MoneyBind",
+	Default = Enum.KeyCode.M,
+	Hold = false,
+	Callback = function()
+	    for i, z in ipairs(game.Workspace:GetDescendants("Tycoons")) do
+if z:IsA("Part") and z.Name == "Ching" then
+firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, z, 0)
+end
+end
+OrionLib:MakeNotification({
+	Name = "Ultra Power Tycoon",
+	Content = "Money Collected",
+	Image = "rbxassetid://4483345998",
+	Time = 5})
+		print("mbind")
+	end    
+})
+
+Tab:AddBind({
+	Name = "PowerBind",
+	Default = Enum.KeyCode.P,
+	Hold = false,
+	Callback = function()
+for i, v in ipairs(game.Workspace:GetDescendants("Tycoons")) do
+if v:IsA("Part") and v.Name == "Neon" then
+firetouchinterest(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, v, 0)
+end
+end
+OrionLib:MakeNotification({
+	Name = "Ultra Power Tycoon",
+	Content = "Powers Collected",
+	Image = "rbxassetid://4483345998",
+	Time = 5})
+		print("press")
+	end    
+})
 
 
 OrionLib:MakeNotification({
