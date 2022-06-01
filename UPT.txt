@@ -8,8 +8,6 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddLabel("Grab / Collect Given Items")
-
 Tab:AddButton({
 	Name = "Powers [P]",
 	Callback = function()
@@ -54,7 +52,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddLabel("Destroy given objects")
+
 
 Tab:AddButton({
 	Name = "Doors",
@@ -72,6 +70,8 @@ OrionLib:MakeNotification({
       		print("doorsdestroyed")
 	end    
 })
+
+Tab:AddLabel("Destroy all Doors")
 
 local Tab = Window:MakeTab({
 	Name = "Universal",
@@ -108,16 +108,13 @@ OrionLib:MakeNotification({
 })
 
 local Tab = Window:MakeTab({
-	Name = "Credits",
+	Name = "Keybinds",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-Tab:AddLabel("Credits")
-Tab:AddParagraph("Kidwitmidgetfriend","Robloxscripts.com - Thread 7254")
-
 Tab:AddBind({
-	Name = "MoneyBind",
+	Name = "Grab Money Keybind",
 	Default = Enum.KeyCode.M,
 	Hold = false,
 	Callback = function()
@@ -136,7 +133,7 @@ OrionLib:MakeNotification({
 })
 
 Tab:AddBind({
-	Name = "PowerBind",
+	Name = "Grab Power Keybind",
 	Default = Enum.KeyCode.P,
 	Hold = false,
 	Callback = function()
@@ -154,6 +151,14 @@ OrionLib:MakeNotification({
 	end    
 })
 
+local Tab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Credits")
+Tab:AddParagraph("Kidwitmidgetfriend","Robloxscripts.com - Thread 7254")
 
 OrionLib:MakeNotification({
 	Name = "Ultra Power Tycoon",
